@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  descripcion: MyString
+  fecha_inicio: 2010-09-03
+  fecha_fin: 2010-09-03
+  monto: 9.99
+  moneda: MyString
+
+two:
+  nombre: MyString
+  descripcion: MyString
+  fecha_inicio: 2010-09-03
+  fecha_fin: 2010-09-03
+  monto: 9.99
+  moneda: MyString

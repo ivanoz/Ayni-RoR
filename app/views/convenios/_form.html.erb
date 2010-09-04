@@ -1,0 +1,26 @@
+<%= simple_form_for(@convenio) do |f| %>
+  <% if @convenio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@convenio.errors.count, "error") %> prohibited this convenio from being saved:</h2>
+
+      <ul>
+      <% @convenio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="inputs">
+    <%= f.input :nombre %>
+    <%= f.input :descripcion, :as => :text %>
+    <%= f.input :fecha_inicio %>
+    <%= f.input :fecha_fin %>
+    <%= f.input :monto %>
+    <%= f.input :moneda, :collection => Convenio::MONEDAS %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

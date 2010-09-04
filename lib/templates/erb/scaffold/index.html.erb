@@ -1,0 +1,27 @@
+<h1>Listado <%= plural_table_name %></h1>
+<%%= link_to 'Nuevo <%= human_name %>', new_<%= singular_table_name %>_path %>
+<table>
+  <tr>
+<% for attribute in attributes -%>
+    <th><%= attribute.human_name %></th>
+<% end -%>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+  <tr>
+<% for attribute in attributes -%>
+    <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+<% end -%>
+    <td><%%= link_to 'Ver', <%= singular_table_name %> %></td>
+    <td><%%= link_to 'Editar', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
+    <td><%%= link_to 'Borrar', <%= singular_table_name %>, :confirm => 'Esta segurooooooooo?', :method => :delete %></td>
+  </tr>
+<%% end %>
+</table>
+
+<br />
+
+
